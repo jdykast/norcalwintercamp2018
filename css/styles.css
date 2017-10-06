@@ -17,6 +17,7 @@ body {
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	height: 100%;
 	width: 100%;
+	position: relative;
 }
 
 
@@ -63,7 +64,6 @@ header .header-content .header-content-inner h2 {
 	margin-top: 50px;
 	margin-bottom: 0;
 	font-size: 30px;
-	//text-shadow: 0px 4px 3px rgba(0,0,0,0.4), 0px 8px 13px rgba(0,0,0,0.1), 0px 18px 23px rgba(0,0,0,0.1);
 }
 
 @media (min-width: 768px) {
@@ -87,6 +87,10 @@ header .header-content .header-content-inner h2 {
 =======================================================*/
 nav {
 	text-transform: uppercase;
+}
+
+#main-nav a.navbar-brand {
+	font-size: 1rem;
 }
 
 #rsvp-link {
@@ -144,6 +148,23 @@ nav {
 
 
 /*=======================================================
+	Banner
+=======================================================*/
+#banner {
+	background: #252525 url('../img/group.png') no-repeat center top;
+	background-size: cover;
+	height: 271px;
+	margin-bottom: 4rem;
+}
+
+@media (max-width: 767px) {
+	#banner {
+		height: 100px;
+	}
+}
+
+
+/*=======================================================
 	Details
 =======================================================*/
 #details .col-sm-5 h2 {
@@ -151,35 +172,14 @@ nav {
 	font-weight: 700;
 }
 
-#details .col-sm-6 h2 {
-	text-transform: uppercase;
-	font-weight: 700;
-}
-
-/* --- Base (>768): Give a border, no bg img --- */
-@media (max-width: 767px) {
-	#details {
-		border-top: 2rem solid #252525;
-		padding-top: 4.5rem;
-	}
-}
-
-/* --- Step 2 (>576): Right align text --- */
+/* --- Step 1 (>576): Right align text --- */
 @media (min-width: 576px) {
 	#details .col-sm-5, .detail-header {
 		text-align: right;
 	}
 }
 
-/* --- Step 3 (>768): Add in bg img --- */
-@media (min-width: 768px) {
-	#details {
-		background: #fff url('../img/group.png') no-repeat center top;
-		padding-top: 341px;
-	}
-}
-
-/* --- Step 4 (>1200): Type tweaks --- */
+/* --- Step 2 (>1200): Type tweaks --- */
 @media (min-width: 1200px) {
 	#details .col-sm-5 h2 {
 		font-size: 2.9rem;
