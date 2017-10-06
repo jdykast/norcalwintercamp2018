@@ -21,16 +21,18 @@
 </head>
 
 <body id="page-top">
-	<nav class="navbar navbar-expand-md fixed-top">
-		<a class="navbar-brand" href="#">NorCal Winter Camp</a>
+	<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+		<a class="navbar-brand" href="#page-top">NorCal Winter Camp</a>
 		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="navbar-collapse collapse" id="navbarCollapse">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item"><a class="nav-link" href="#">Details</a></li>
+				<li class="nav-item"><a class="nav-link" href="#details">Details</a></li>
+				<!--
 				<li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">RSVP</a></li>
+				-->
+				<li class="nav-item"><a id="rsvp-link" class="btn btn-primary nav-link" href="#rsvp">RSVP!</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -72,7 +74,7 @@
         <div class="container">
             <div id="" class="row">
                 <div class="col-sm-5">
-                    <h2>Dates:</p>
+                    <h2>Dates:</h2>
 				</div>
                 <div class="col-sm-7">
                     <p>January 27-29<br />
@@ -81,7 +83,7 @@
 			</div>
             <div id="" class="row">
                 <div class="col-sm-5">
-                    <h2>Cost:</p>
+                    <h2>Cost:</h2>
 				</div>
                 <div class="col-sm-7">
                     <p>$155<br />
@@ -90,7 +92,7 @@
 			</div>
             <div id="" class="row">
                 <div class="col-sm-5">
-                    <h2>Speaker:</p>
+                    <h2>Speaker:</h2>
 				</div>
                 <div class="col-sm-7">
                     <p>Zach Adams<br />
@@ -99,15 +101,31 @@
 			</div>
             <div id="" class="row">
                 <div class="col-sm-5">
-                    <h2>Location:</p>
+                    <h2>Location:</h2>
 				</div>
                 <div class="col-sm-7">
                     <p>Woodleaf Camp<br />
 					Our winter home away from home.</p>
 				</div>
 			</div>
+            <div id="rsvp" class="row">
+                <div class="col-sm-5">
+                    <h2>RSVP!</h2>
+				</div>
+                <div class="col-sm-7">
+                    <p>Are you interested in bringing your high school students?<br />
+					<a href="mailto:info@norcalwintercamp.com">Shoot us an email</a> and let us know!</p>
+				</div>
+			</div>
         </div>
 	</section>
+	
+	<footer>
+        <div class="container text-center">
+            <p>NorCal Winter Camp is being hosted by <a href="http://crossroadslive.com">Crossroads Church</a>.<br />
+            <a href="mailto:info@norcalwintercamp.com">Drop us a line</a> if you have any questions or comments.</p>
+        </div>
+	</footer>
 	
 	<!-- Scipts -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

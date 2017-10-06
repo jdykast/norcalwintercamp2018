@@ -85,18 +85,15 @@ header .header-content .header-content-inner h2 {
 /*=======================================================
 	Nav
 =======================================================*/
-/*
+nav {
+	text-transform: uppercase;
+}
+
 #rsvp-link {
-	background: #F05F40;
 	color: #fff;
-	padding: 6px 19px;
-	border: 0 none;
-	border-radius: 3px;
-	margin-top: 9px;
 }
 
 #rsvp-link:hover {
-	background: #222;
 	color: #fff;
 }
 
@@ -113,18 +110,21 @@ header .header-content .header-content-inner h2 {
 	text-transform: uppercase;
 }
 
-/* --- Base (>768) --- */
-@media (min-width: 768px) {
-	#blurb {
-		padding: 4rem 0 3rem;
-	}
-
+/* --- Step 1 (>576) --- */
+@media (min-width: 576px) {
 	#blurbHeader {
 		text-align: right;
 	}
 }
 
-/* --- Medium (768-1199) --- */
+/* --- Step 2 (>768) --- */
+@media (min-width: 768px) {
+	#blurb {
+		padding: 4rem 0 3rem;
+	}
+}
+
+/* --- Step 3 (768-1199) --- */
 @media (max-width: 1199px) and (min-width: 768px) {
 	#blurbHeader h2 {
 		font-size: 3rem;
@@ -133,7 +133,7 @@ header .header-content .header-content-inner h2 {
 	}
 }
 
-/* --- Large (>1200) --- */
+/* --- Step 4 (>1200) --- */
 @media (min-width: 1200px) {
 	#blurbHeader h2 {
 		font-size: 5rem;
@@ -146,11 +146,17 @@ header .header-content .header-content-inner h2 {
 /*=======================================================
 	Details
 =======================================================*/
-#details .col-sm-5 {
+#details .col-sm-5 h2 {
 	text-transform: uppercase;
+	font-weight: 700;
 }
 
-/* --- Little (>768) --- */
+#details .col-sm-6 h2 {
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+/* --- Base (>768): Give a border, no bg img --- */
 @media (max-width: 767px) {
 	#details {
 		border-top: 2rem solid #252525;
@@ -158,28 +164,22 @@ header .header-content .header-content-inner h2 {
 	}
 }
 
-/* --- Base (>768) --- */
+/* --- Step 2 (>576): Right align text --- */
+@media (min-width: 576px) {
+	#details .col-sm-5, .detail-header {
+		text-align: right;
+	}
+}
+
+/* --- Step 3 (>768): Add in bg img --- */
 @media (min-width: 768px) {
 	#details {
 		background: #fff url('../img/group.png') no-repeat center top;
 		padding-top: 341px;
 	}
-	
-	#details .col-sm-5 {
-		text-align: right;
-		text-transform: uppercase;
-	}
 }
 
-/* --- Medium (768-1199) --- */
-@media (max-width: 1199px) and (min-width: 768px) {
-	#details .col-sm-5 {
-		text-align: right;
-		text-transform: uppercase;
-	}
-}
-
-/* --- Large (>1200) --- */
+/* --- Step 4 (>1200): Type tweaks --- */
 @media (min-width: 1200px) {
 	#details .col-sm-5 h2 {
 		font-size: 2.9rem;
@@ -189,4 +189,25 @@ header .header-content .header-content-inner h2 {
 	#details .col-sm-7 p {
 		margin-bottom: 2rem;
 	}
+}
+
+
+/*=======================================================
+	Footer
+=======================================================*/
+footer {
+	background-color: #212529;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: .8rem;
+	margin-top: 2rem;
+	padding: 3rem 0 1rem;
+}
+
+footer a {
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: underline;
+}
+
+footer a:hover {
+	color: #fff;
 }
