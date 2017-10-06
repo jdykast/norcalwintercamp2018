@@ -7,6 +7,7 @@
  *
 */	
 
+/*
 	// jQuery for page scrolling feature - requires jQuery Easing plugin
 	$('a.page-scroll').bind('click', function(event) {
 		var $anchor = $(this);
@@ -52,6 +53,7 @@
 	}, 300);
 
 	// Initialize and Configure Magnific Popup Lightbox Plugin
+	/*
 	$('.popup-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -66,5 +68,6 @@
 			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
 		}
 	});
+*/
 
 })(jQuery); // End of use strict
