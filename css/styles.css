@@ -99,3 +99,94 @@ header .header-content .header-content-inner h2 {
 	background: #222;
 	color: #fff;
 }
+
+
+/*=======================================================
+	Blurb
+=======================================================*/
+#blurb {
+	padding: 3rem 0;
+}
+
+#blurbHeader h2 {
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* --- Base (>768) --- */
+@media (min-width: 768px) {
+	#blurb {
+		padding: 4rem 0 3rem;
+	}
+
+	#blurbHeader {
+		text-align: right;
+	}
+}
+
+/* --- Medium (768-1199) --- */
+@media (max-width: 1199px) and (min-width: 768px) {
+	#blurbHeader h2 {
+		font-size: 3rem;
+		line-height: .9;
+		margin-top: 0;
+	}
+}
+
+/* --- Large (>1200) --- */
+@media (min-width: 1200px) {
+	#blurbHeader h2 {
+		font-size: 5rem;
+		line-height: .9;
+		margin-top: 0;
+	}
+}
+
+
+/*=======================================================
+	Details
+=======================================================*/
+#details .col-sm-5 {
+	text-transform: uppercase;
+}
+
+/* --- Little (>768) --- */
+@media (max-width: 767px) {
+	#details {
+		border-top: 2rem solid #252525;
+		padding-top: 4.5rem;
+	}
+}
+
+/* --- Base (>768) --- */
+@media (min-width: 768px) {
+	#details {
+		background: #fff url('../img/group.png') no-repeat center top;
+		padding-top: 341px;
+	}
+	
+	#details .col-sm-5 {
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+/* --- Medium (768-1199) --- */
+@media (max-width: 1199px) and (min-width: 768px) {
+	#details .col-sm-5 {
+		text-align: right;
+		text-transform: uppercase;
+	}
+}
+
+/* --- Large (>1200) --- */
+@media (min-width: 1200px) {
+	#details .col-sm-5 h2 {
+		font-size: 2.9rem;
+		line-height: 1;
+	}
+
+	#details .col-sm-7 p {
+		margin-bottom: 2rem;
+	}
+}
