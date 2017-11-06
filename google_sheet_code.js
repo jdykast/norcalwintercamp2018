@@ -1,10 +1,10 @@
 function assignEditUrls() {
 	/*
-	 *  0. Config
-	 *  1. Create edit url
-	 *  2. Create short url
-	 *  3. Update sheet with new urls
-	 *  4. Send emails (respondent, receiver)
+		*  0. Config
+		*  1. Create edit url
+		*  2. Create short url
+		*  3. Update sheet with new urls
+		*  4. Send emails (respondent, receiver)
 	*/
 	
 	/* ============================================================
@@ -21,18 +21,9 @@ function assignEditUrls() {
 		Set config variables.
 	============================================================ */
 	
-	/*
-		Coding help found here:
-		Get last row
-		https://stackoverflow.com/questions/15659998/dynamically-update-cells-after-form-submission
-		
-		Get last form response
-		https://stackoverflow.com/questions/31204066/event-object-not-working-in-google-app-script-for-onsubmit-trigger-in-google-for
-	*/
-	
 	
 	/* ============================================================
-	 *  0. Config
+	*  0. Config
 	============================================================ */
 	// Form ID (edit view, NOT entry view)
 	var formId = '1IFjn1cuMWwhIT_5bDn48qPP62AFVviIX0rkbCN69Rh8';
@@ -51,45 +42,45 @@ function assignEditUrls() {
 	
 	
 	/* ============================================================
-	 *  1. Create edit url
+	*  1. Create edit url
 	============================================================ */
 	// Connect to form
 	var form = FormApp.openById(formId);
 	
 	// Get form responses
-    var responses = form.getResponses();
+	var responses = form.getResponses();
     
-    // Find out how many responses there are
+	// Find out how many responses there are
 	var length = responses.length;
     
-    // Get the last response
+	// Get the last response
 	var lastResponse = responses[length-1];
     
-    // Create the editUrl from the last response
-    var editUrl = lastResponse.getEditResponseUrl();
+	// Create the editUrl from the last response
+	var editUrl = lastResponse.getEditResponseUrl();
 	
 	
 	/* ============================================================
-	 *  2. Create short url
+	*  2. Create short url
 	============================================================ */
 	// Set up fetchUrl
-    var fetchUrl = 'https://api-ssl.bitly.com/v3/shorten?';
+	var fetchUrl = 'https://api-ssl.bitly.com/v3/shorten?';
 	fetchUrl += 'access_token=' + bitlyToken;
 	fetchUrl += '&longUrl=' + editUrl;
 	fetchUrl += '&format=txt';
 	
-    // Go get short link
+	// Go get short link
 	var response = UrlFetchApp.fetch(fetchUrl, {'muteHttpExceptions': true});
     
-    // Make response a string
-    var shortUrl = response.getContentText();
+	// Make response a string
+	var shortUrl = response.getContentText();
     
-    // Trim any excess whitespace
-    shortUrl = shortUrl.trim();
+	// Trim any excess whitespace
+	shortUrl = shortUrl.trim();
 	
 
 	/* ============================================================
-	 *  3. Update sheet
+	*  3. Update sheet
 	============================================================ */
 	// Connect to sheet
 	var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(sheetName);
@@ -105,9 +96,9 @@ function assignEditUrls() {
 	
 	
 	/* ============================================================
-	 *  4. Send emails
-		(Note: This sends emails to respondent only.
-		Emails to the sheet owner are enabled via Sheet -> Tools -> Notification Rules)
+	*  4. Send emails
+	(Note: This sends emails to respondent only.
+	Emails to the sheet owner are enabled via Sheet -> Tools -> Notification Rules)
 	============================================================ */
 	var emailAddress = sheet.getRange(responseRow, respondentEmail).getValue();
 
@@ -123,7 +114,7 @@ function assignEditUrls() {
 		htmlBody: emailBody
 	});
 	
-    // Stub; just a place to stop the debugger
+	// Stub; just a place to stop the debugger
 	Logger.log("done");
 
 
