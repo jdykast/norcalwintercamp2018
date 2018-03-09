@@ -100,7 +100,8 @@ function assignEditUrls() {
 	(Note: This sends emails to respondent only.
 	Emails to the sheet owner are enabled via Sheet -> Tools -> Notification Rules)
 	============================================================ */
-	var emailAddress = sheet.getRange(responseRow, respondentEmail).getValue();
+    /*
+    var emailAddress = sheet.getRange(responseRow, respondentEmail).getValue();
 
 	var emailSubject = "Winter Camp Regristration Received!";
 	var emailBody = "Thanks for your registration!<br><br>You can use <a href='"+shortUrl+"'>"+shortUrl+"</a> to edit your information. Use it as often as needed--we want to keep your information current!<br><br>";
@@ -113,7 +114,8 @@ function assignEditUrls() {
 		subject: emailSubject,
 		htmlBody: emailBody
 	});
-	
+    */
+    
 	// Stub; just a place to stop the debugger
 	Logger.log("done");
 
